@@ -1,0 +1,60 @@
+﻿@model ShopProject.Models.Product
+
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.name);
+}
+@if (@TempData["message"] != null)
+{
+    <div class="alert alert-danger" role="alert">@TempData["message"]</div>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div>
+    <h2>@Html.DisplayFor(model => model.name)</h2>
+    <hr />
+    <div class="col-sm-4">
+        <img width="500"   src="~/App_Themes/Default/images/@Html.DisplayFor(model => model.image)" /> 
+    </div>
+    <dl class="dl-horizontal col-sm-4">
+        
+        <dt>
+           Opis:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+    </dl>
+    <dl class="dl-horizontal col-sm-4">
+        <dt>
+         Cena:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price) zł
+        </dd>
+        <dt>
+            Ilość:
+        </dt>
+        <dd>
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.TextBox("txtQuantity")
+                </div>
+            </div>
+        </dd>
+        <br />
+            <div class="form-group">
+                <div class="col-md-offset-6 col-md-10">
+                    <input id="AddToCartBtn" type="submit" value="Dodaj do koszyka" class="btn btn-default" />
+                   
+                </div>
+            </div>
+
+    </dl>
+</div>
+
+}

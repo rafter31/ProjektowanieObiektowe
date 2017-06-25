@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Shopproject" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\tybor\\OneDrive\\Dokumenty\\Visual\ Studio\ 2015\\Projects\\ShopProject\\ShopProject\\ShopProject\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\tybor\\OneDrive\\Dokumenty\\Visual\ Studio\ 2015\\Projects\\ShopProject\\ShopProject\\ShopProject\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DbName-Web.config Connection String" description="" value="DbName_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\tybor\\OneDrive\\Dokumenty\\Visual\ Studio\ 2015\\Projects\\ShopProject\\ShopProject\\ShopProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DbName']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="DefaultConnection_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\tybor\\OneDrive\\Dokumenty\\Visual\ Studio\ 2015\\Projects\\ShopProject\\ShopProject\\ShopProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ShopContext-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=ProjectShopDB;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\tybor\\OneDrive\\Dokumenty\\Visual\ Studio\ 2015\\Projects\\ShopProject\\ShopProject\\ShopProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShopContext']/@connectionString" />
+  </parameter>
+</parameters>

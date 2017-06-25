@@ -1,0 +1,66 @@
+﻿@using ShopProject.Models
+@model IEnumerable<object>
+    @{
+        List<ShopProject.Models.Product> productsList = Model.ToList()[0] as List<ShopProject.Models.Product>;
+        List<ShopProject.Models.Category> categoriesList = Model.ToList()[1] as List<ShopProject.Models.Category>;
+    }
+
+
+            @{
+                ViewBag.Title = "Index";
+            }
+
+            <h2>Index</h2>
+
+            <p>
+                @Html.ActionLink("Dodaj produkt", "Create")
+            </p>
+
+            <div class="col-md-3">
+                <p class="lead">Kategorie</p>
+                <div class="list-group">
+                    @foreach (var singleCategory in categoriesList)
+                    {
+                        <p class="list-group-item" onclick="location.href = '@(Url.Action("", "Product", new { category = singleCategory.code }))'" style="cursor: pointer">@Html.DisplayFor(modelItem => singleCategory.name)</p>
+                    }
+                </div>
+                
+            </div>
+<div class="col-md-9">
+
+    <div class="row">
+        @foreach (var item in productsList)
+        {
+
+            <div style="height: 360px;cursor: pointer"  class="col-sm-4 col-lg-4 col-md-4" onclick="location.href = '@(Url.Action("Details", "Product", new {id = item.Id}))'">
+                <div class="thumbnail">
+                    <img class="prod_image" src="~/App_Themes/Default/images/@Html.DisplayFor(modelItem => item.image)"  width="300" height="130"/>
+                    <div class="caption">
+                        <h4 class="pull-right"><a href="#">@Html.DisplayFor(modelItem => item.name)</a></h4>
+                        <h4>
+                            <a href="#">@Html.DisplayFor(modelItem => item.price) zł</a>
+                        </h4>
+
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">31 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+        }
+    </div>
+</div>
+
+

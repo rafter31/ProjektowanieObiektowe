@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <img class="prod_image" src="~/App_Themes/Default/images/banner1.png" width="1000px" />
+</div>
+
+<div class="row">
+  
+        <div style="height: 360px;cursor: pointer" class="col-sm-4 col-lg-4 col-md-4" onclick="location.href = '@(Url.Action("Details", "Product", new {id = 4}))'">
+            <div class="thumbnail">
+                <img class="prod_image" src="~/App_Themes/Default/images/DellInspiron5567.jpg" width="300" height="130" />
+                <div class="caption">
+                    <h4 class="pull-right"><a href="#">Dell Inspiron 5567 i7-7500U/8GB GF980</a></h4>
+                    <h4>
+                        <a href="#">3399,00 zł</a>
+                    </h4>
+
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">31 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+   
+
+        <div style="height: 360px;cursor: pointer" class="col-sm-4 col-lg-4 col-md-4" onclick="location.href = '@(Url.Action("Details", "Product", new {id = 7}))'">
+            <div class="thumbnail">
+                <img class="prod_image" src="~/App_Themes/Default/images/LenovoIdeaPad100.jpg" width="300" height="130" />
+                <div class="caption">
+                    <h4 class="pull-right"><a href="#">Lenovo IdeaPad 100-15 i3-5005U/4GB/500/DVD-RW/Win10</a></h4>
+                    <h4>
+                        <a href="#">1699,00 zł</a>
+                    </h4>
+
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">31 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                </div>
+            </div>
+       
+    </div>
+    <div style="height: 360px;cursor: pointer" class="col-sm-4 col-lg-4 col-md-4" onclick="location.href = '@(Url.Action("Details", "Product", new {id = 10}))'">
+        <div class="thumbnail">
+            <img class="prod_image" src="~/App_Themes/Default/images/AppleiMaci5.jpg" width="300" height="130" />
+            <div class="caption">
+                <h4 class="pull-right"><a href="#">Apple iMac i5 2,8GHz/8GB/1000/MacOS X Iris Pro</a></h4>
+                <h4>
+                    <a href="#">5549,00 zł</a>
+                </h4>
+
+            </div>
+            <div class="ratings">
+                <p class="pull-right">31 reviews</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
